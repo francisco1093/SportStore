@@ -1,0 +1,45 @@
+.product{
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);;
+    background-color: rgba(250, 239, 239, 0.774);
+    width: 280px;
+    height: 400px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 5%;
+}
+.product-title{
+    margin-top: 10px;
+    font-size: 25px;
+    color: rgb(3, 92, 25);
+}
+.img-product{
+    height: 200px;
+    width: 230px;
+}
+.label-Price{
+display: block;
+font-weight: 500;
+margin-top: 5px;
+color: rgb(3, 92, 25);
+}
+
+.label-Total{
+display: block;
+font-weight: 500;
+color: rgb(3, 92, 25);
+margin-top: 0px;
+margin-bottom: 10px;
+}
+
+.btn-Add{
+    margin-top: 10px;
+    color: white;
+}
+
+@media (max-width:768px)
+{
+    .product{
+        width:100%;
+    }
+}
