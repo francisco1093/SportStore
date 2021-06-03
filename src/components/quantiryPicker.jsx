@@ -34,3 +34,4 @@ decreaseQuantiy=()=>{
 }
 
 export default QuantiryPicker
+
