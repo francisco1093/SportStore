@@ -4,7 +4,9 @@ import "./product.css";
 import QuantiryPicker from './quantiryPicker';
 
 class Product extends Component {
-    state = {  }
+    state = { 
+        quantiry:1,
+     };
     render() { 
         return ( 
             <div className="product">
@@ -14,13 +16,23 @@ class Product extends Component {
                 <img className="img-product" src={"./imgs/products/"+this.props.data.image} alt="Product"></img>
                 
                 <div>
-                    <label className="label-Price">Price: ${(Math.round(this.props.data.price * 100) / 100).toFixed(2)}</label>
-                    <label className="label-Total">Total: ${(Math.round(this.props.data.price * 100) / 100).toFixed(2)}</label>
+                    <label className="label-Price">Price: ${this.props.data.price.toFixed(2)}</label>
+                    <label className="label-Total">Total: ${this.getTotal()}</label>
                 </div>
-                <QuantiryPicker></QuantiryPicker>
+                <QuantiryPicker onQuantiryChange={this.handleQuantiryChange}></QuantiryPicker>
                 <button className="btn btn-sm btn-info btn-Add">Add</button>
             </div>
             );
+    }
+
+    getTotal = () =>{
+        return (this.props.data.price*this.state.quantiry).toFixed(2);
+    }
+    
+    handleQuantiryChange = (qnty) =>{
+        console.log("EVENT qnty change ",qnty);
+
+        this.setState({quantiry:qnty});
     }
 }
  

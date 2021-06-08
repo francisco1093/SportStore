@@ -9,7 +9,11 @@ function App() {
   return (
     <div className="App">
       
-      <h1 className="App-title">Sport Fran</h1>
+      <div>
+        <img className="logo" src="./imgs/products/logo-4.png"></img>
+        <h1 className="App-title">Sport Fran</h1>
+        <img className="logo" src="./imgs/products/logo-4.png"></img>
+      </div>
       <NavBar></NavBar>
       <Catalog></Catalog>
       <Footer></Footer>

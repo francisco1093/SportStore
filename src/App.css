@@ -30,8 +30,15 @@
 }
 
 .App-title{
-  color: rgb(255, 255, 255);
+  display: inline-block;
+  color: rgb(219, 206, 19);
   font-size: 50px;
+}
+
+.logo{
+
+  width: 150px;
+  height: 150px;
 }
 
 @keyframes App-logo-spin {

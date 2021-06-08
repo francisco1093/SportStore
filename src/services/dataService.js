@@ -6,6 +6,7 @@ var data = [
     title: "Jersey Chivas Puma 2021",
     price: 999.90,
     minimum: 1,
+    category:"Jersey",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ var data = [
     title: "Jersey Brasil Retro Nike 2021",
     price: 899.90,
     minimum: 1,
+    category:"Jersey",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ var data = [
     title: "Jersey Milan Ultimate Puma 2021",
     price: 999.90,
     minimum: 1,
+    category:"Jersey",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ var data = [
     title: "Jersey Portugal Nike 2021",
     price: 899.90,
     minimum: 1,
+    category:"Jersey",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ var data = [
     title: "Tennis soccer Adidas F50",
     price: 999.90,
     minimum: 1,
+    category:"Tennis",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ var data = [
     title: "Tennis Soccer Adidas FX50",
     price: 759.90,
     minimum: 1,
+    category:"Tennis",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ var data = [
     title: "Balon Voit Special Edition 2021",
     price: 799.90,
     minimum: 1,
+    category:"Balon",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ var data = [
     title: "Balon Nike American Cup 2020",
     price: 599.90,
     minimum: 1,
+    category:"Balon",
   },
 ];
 

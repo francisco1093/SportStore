@@ -19,15 +19,22 @@ render(){
 
 increaseQuantity = () =>{
     console.log("Increase");
+    let qnty = this.state.quantiryPickerValue+1;
     if(this.state.quantiryPickerValue<99)
-    this.setState({quantiryPickerValue:this.state.quantiryPickerValue+1})
-    }
+    this.setState({quantiryPickerValue:qnty})
+    this.props.onQuantiryChange(qnty);
+}
 
 decreaseQuantiy=()=>{
         console.log("Decrease");
+        let qnty = this.state.quantiryPickerValue-1;
         if(this.state.quantiryPickerValue>1)
-        this.setState({quantiryPickerValue:this.state.quantiryPickerValue-1})
-
+       {
+            console.log("Decrease");
+            let qnty = this.state.quantiryPickerValue-1;
+            this.setState({quantiryPickerValue:qnty})
+            this.props.onQuantiryChange(qnty);
+        }
     }
 
 
