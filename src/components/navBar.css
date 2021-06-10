@@ -1,5 +1,16 @@
 .navBar-page{
     margin-bottom: 0px;
-    background-color:  rgb(219, 206, 19);
+    background-color:  rgb(8, 9, 112);
+    color: rgb(236, 173, 37);
     
+}
+
+.nav-item-color{
+    color:rgb(236, 173, 37);
+  
+}
+
+.navbar.container-fluid Link
+{
+    color: red;
 }

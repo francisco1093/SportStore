@@ -11,9 +11,9 @@
 
 .btn-category{
     
-    color: rgb(136, 127, 2);
-    background-color: rgb(11, 216, 11);
-    border: 1px solid rgb(11, 216, 11);;
+    color: rgb(236, 173, 37);
+    background-color: rgb(8, 9, 112);
+    border: 1px solid rgb(236, 173, 37);;
     font-size: 25px;
     font-weight: 900;
     margin-left: 5px;
@@ -24,7 +24,7 @@
 }
 
 .btn-category:hover{
-    color: rgb(11, 216, 11);
-    background-color:  rgb(136, 127, 2);
-    border: 1px solid rgb(136, 127, 2);
+    color: rgb(8, 9, 112);
+    background-color:  rgb(236, 173, 37);
+    border: 1px solid rgb(8, 9, 112);
 }
