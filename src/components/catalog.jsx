@@ -13,7 +13,7 @@ class Catalog extends Component {
 
       let prodsToDisplay=this.state.catalog;
 
-        if(this.state.selectedCategory!="All")
+        if(this.state.selectedCategory!=="All")
         {
           prodsToDisplay =  prodsToDisplay.filter((prod) => prod.category === this.state.selectedCategory  ); 
         }
@@ -29,8 +29,9 @@ class Catalog extends Component {
         </div>
 
         <div className="products mt-3">
-          { prodsToDisplay.map((item) => (
-            <Product key={item.id} data={item}></Product>
+          {
+            prodsToDisplay.map((item, index) => ( //item item.id
+            <Product key={index} data={item}></Product>
           ))}
         </div>
       </div>
@@ -42,10 +43,10 @@ class Catalog extends Component {
       this.setState({selectedCategory:cat});
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     console.log("did mount");
     let service = new DataService();
-    let catalog = service.getCatalog();
+    let catalog = await service.getCatalog();
 
     var categorys = [];
     categorys.push("All");
