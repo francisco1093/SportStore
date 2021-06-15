@@ -3,27 +3,32 @@
  * * must return an state / new state
  * **/
 
+const cartReducer = (state = [], action) => {
+  switch (action.type) {
+    case "ADD_TO_CART":
+      /*
+       * * if the product (action.payload) exist inside the copy (compare by id)
+       * * then just update the quantity of the object that exist in copy
+       * * otherwise push the product to copy
+       * */
 
-const cartReducer = (state=[], action) =>{
+      var copy = [...state];
+      for (let i = 0; i < copy.length; i++) {
+        if (copy[i].id === action.payload.id) {
+          copy[i].quantiry += action.payload.quantiry;
+          return copy;
+        }
+      }
 
-    
+      return [...state, action.payload];
 
-    switch(action.type)
-    {
-        case "ADD_TO_CART":
-        let copyState =[...state, action.payload];
-        //copyState.push(action.payload);
-        return copyState;
+    case "REMOVE_FORM_CART":
+      return state;
 
-        case "REMOVE_FORM_CART":
-        
-        return state;
-
-        default:
-            break;
-    }
-    return state;
-}
+    default:
+      break;
+  }
+  return state;
+};
 
 export default cartReducer;
-

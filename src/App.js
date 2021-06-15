@@ -1,4 +1,5 @@
 import "./App.css";
+import "font-awesome/css/font-awesome.min.css"
 import NavBar from "./components/navBar";
 import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";

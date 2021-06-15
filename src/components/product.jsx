@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import "./product.css";
 //import QuantiryPicker from './quantiryPicker';
 import QuantiryPicker from './quantiryPicker';
+import { addToCart } from './../store/actions';
+import { connect } from 'react-redux';
 
 class Product extends Component {
     state = { 
@@ -20,10 +22,16 @@ class Product extends Component {
                     <label className="label-Total">Total: ${this.getTotal()}</label>
                 </div>
                 <QuantiryPicker onQuantiryChange={this.handleQuantiryChange}></QuantiryPicker>
-                <button className="btn btn-sm btn-info btn-Add">Add</button>
+                <button onClick={this.handleAddToCart} className="btn btn-sm btn-info btn-Add">
+                 <i className="fa fa-cart-plus" aria-hidden="true"></i>
+                &nbsp;Add
+                </button>
             </div>
             );
     }
+
+
+    
 
     getTotal = () =>{
         return (this.props.data.price*this.state.quantiry).toFixed(2);
@@ -34,6 +42,23 @@ class Product extends Component {
 
         this.setState({quantiry:qnty});
     }
+
+    handleAddToCart = () =>{
+        console.log("Add");
+
+        let prod = {...this.props.data, quantiry:this.state.quantiry};
+        //let prod = {...this.props.data};
+        //prod.quantiry=this.state.quantiry;
+
+        this.props.addToCart(prod);
+
+    }
 }
+
+/*** Connect the component to the store (to read/dispatch actions)
+ * * receives 2 params:
+ * * 1 - A function that maps what you want to read
+ * * 2 - An object with the actions you want to dispatch
+ * */
  
-export default Product;
+export default connect(null,{addToCart})(Product);
