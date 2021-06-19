@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from './components/home';
 import About from './components/about';
 import Admin from './components/admin';
+import Cart from './components/cart';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/catalog" exact component={Catalog}></Route>
           <Route path="/about" exact component={About}></Route>
           <Route path="/admin" exact component={Admin}></Route>
+          <Route path="/cart" exact component={Cart}></Route>
      </Switch>
       <Footer></Footer>
     </div>

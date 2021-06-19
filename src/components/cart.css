@@ -1,0 +1,16 @@
+.cart-order{
+    font-size:35px;
+    color: rgb(236, 173, 37);
+
+}
+.total-cart{
+    margin-top: 10px;
+}
+
+.total-price{
+ 
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(250, 239, 239, 0.774);
+    margin: 20px;
+    border-radius: 5%;
+}

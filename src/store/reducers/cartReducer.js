@@ -22,8 +22,12 @@ const cartReducer = (state = [], action) => {
 
       return [...state, action.payload];
 
-    case "REMOVE_FORM_CART":
-      return state;
+    case "REMOVE_FROM_CART":
+      return state.filter(prod => prod.id !== action.payload);
+      //return copy;
+
+    case "CLEAR_CART":
+      return [];
 
     default:
       break;
